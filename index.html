@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM Student Chapter</title>
+    <!-- Link to external styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="ACM Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h2>Welcome to the ACM Student Chapter</h2>
+            <p>Join us to explore the world of technology, coding, and innovation.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>The ACM-XIM Chapter is a leading technical student chapter at XIM University, inspiring young tech enthusiasts to explore technology. We organize events in web development, IoT, AI, ML, and more, providing a hub for innovation and learning.</p>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Web Styledown Challenge</li>
+            <li>Tech Talks and Workshops</li>
+        </ul>
+        <br>
+        <h3 id="past-events">Past Events</h3>
+        <br>
+        
+        <ul class="event-gallery">
+            
+            <li><img src="images/Events Poster/2.jpg" alt="Web Styledown Poster" class="event-img" onclick="openModal(this.src, this.alt)"></li>
+            <li><img src="images/Events Poster/Logicloom.png" alt="Logicloom Event" class="event-img" onclick="openModal(this.src, this.alt)"></li>
+            <li><img src="images/Events Poster/MINDSPARK (1).jpg" alt="MINDSPARK Event" class="event-img" onclick="openModal(this.src, this.alt)"></li>
+            <li><img src="images/Events Poster/WebStyledown.jpg" alt="WebStyledown Event" class="event-img" onclick="openModal(this.src, this.alt)"></li>
+        </ul>
+    </section>
+    
+
+    <!-- Image Highlights Section -->
+    <section id="image-highlights" class="highlights-section">
+        <h2>Event Highlights</h2>
+        <p>Take a glimpse into some of our past events:</p>
+        <div class="gallery-container">
+            <img src="images\Event_s photos\DSC_0018.JPG" alt="Event 1">
+            <img src="images\Event_s photos\DSC_0020.JPG" alt="Event 2">
+            <img src="images\Event_s photos\DSC_0536.JPG" alt="Event 3">
+            <img src="images\Event_s photos\DSC_0019.JPG" alt="Event 4">
+            <img src="images\Event_s photos\IMG_2617.JPG" alt="Event 5">
+        </div>
+    </section>
+    <!-- Image Modal (Popup) -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:student.chap.acm@xim.edu.in">student.chap.acm@xim.edu.in</a></p>
+        <p>Follow us on our social media platforms for updates:</p>
+        <div class="social-links">
+            <!-- Instagram Icon (Font Awesome) -->
+            <a href="https://www.instagram.com/acm_xim/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        
+            <!-- LinkedIn Icon (Image) -->
+            <a href="https://www.linkedin.com/company/xim-acm/mycompany/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i> <!-- Font Awesome LinkedIn icon -->
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 ACM XIM WEB STYLEDOWN EVENT.</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
